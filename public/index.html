@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplayer Anagrams</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- HOME VIEW -->
+    <div id="home-view" class="view">
+      <h1>Multiplayer Anagrams</h1>
+      <div class="button-group">
+        <button id="create-game-btn" class="btn btn-primary">Create New Game</button>
+        <div class="join-section">
+          <input type="text" id="join-code-input" placeholder="Enter Game Code" maxlength="6">
+          <button id="join-game-btn" class="btn btn-secondary">Join Game</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOBBY VIEW -->
+    <div id="lobby-view" class="view hidden">
+      <h1>Game Lobby</h1>
+      <div class="game-code-display">
+        <span class="label">Game Code:</span>
+        <span id="lobby-game-code" class="game-code"></span>
+      </div>
+      <div class="letters-preview">
+        <span class="label">Letters:</span>
+        <span id="lobby-letters" class="letters"></span>
+      </div>
+      <div class="players-section">
+        <h2>Players (<span id="player-count">0</span>)</h2>
+        <ul id="players-list"></ul>
+      </div>
+      <button id="start-game-btn" class="btn btn-primary">Start Game</button>
+      <p class="hint">Waiting for host to start the game...</p>
+    </div>
+
+    <!-- GAME VIEW -->
+    <div id="game-view" class="view hidden">
+      <div class="game-header">
+        <div class="timer-display">
+          <span class="label">Time Left:</span>
+          <span id="timer" class="timer">10</span>
+        </div>
+        <div class="score-display">
+          <span class="label">Your Score:</span>
+          <span id="current-score" class="score">0</span>
+        </div>
+      </div>
+
+      <div class="letters-display">
+        <div id="game-letters" class="letters-large"></div>
+      </div>
+
+      <div class="word-input-section">
+        <input type="text" id="word-input" placeholder="Type a word..." autocomplete="off" autocapitalize="characters">
+        <button id="add-word-btn" class="btn btn-primary">Add Word</button>
+      </div>
+
+      <div id="feedback" class="feedback hidden"></div>
+
+      <div class="words-section">
+        <h2>Your Words</h2>
+        <ul id="player-words-list"></ul>
+      </div>
+    </div>
+
+    <!-- RESULTS VIEW -->
+    <div id="results-view" class="view hidden">
+      <h1>Game Results</h1>
+      <div class="letters-display">
+        <span class="label">Letters were:</span>
+        <span id="results-letters" class="letters"></span>
+      </div>
+      <div class="leaderboard">
+        <h2>Leaderboard</h2>
+        <div id="leaderboard-list"></div>
+      </div>
+      <button id="play-again-btn" class="btn btn-primary">Play Again</button>
+    </div>
+
+    <!-- NAME PROMPT MODAL -->
+    <div id="name-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Enter Your Name</h2>
+        <input type="text" id="player-name-input" placeholder="Your name" maxlength="20">
+        <button id="submit-name-btn" class="btn btn-primary">Join</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

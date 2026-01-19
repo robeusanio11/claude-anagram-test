@@ -1,0 +1,16 @@
+{
+  "name": "multiplayer-anagrams",
+  "version": "1.0.0",
+  "description": "Simple multiplayer anagrams game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["anagrams", "multiplayer", "game"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

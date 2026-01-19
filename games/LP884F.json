@@ -1,0 +1,32 @@
+{
+  "gameCode": "LP884F",
+  "letters": "TGNIAS",
+  "players": {
+    "player_1768856193626_a4ltz08z8": {
+      "name": "r",
+      "words": [
+        {
+          "word": "GIANTS",
+          "points": 1400
+        },
+        {
+          "word": "GIANT",
+          "points": 800
+        },
+        {
+          "word": "GAINS",
+          "points": 800
+        },
+        {
+          "word": "GAIN",
+          "points": 400
+        }
+      ],
+      "score": 3400
+    }
+  },
+  "status": "finished",
+  "startTime": 1768856194731,
+  "duration": 10,
+  "createdAt": 1768856192252
+}

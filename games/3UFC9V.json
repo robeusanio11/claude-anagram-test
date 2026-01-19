@@ -1,0 +1,20 @@
+{
+  "gameCode": "3UFC9V",
+  "letters": "ISRNGA",
+  "players": {
+    "player_1768856210745_ck0tq30ds": {
+      "name": "r",
+      "words": [
+        {
+          "word": "GRINS",
+          "points": 800
+        }
+      ],
+      "score": 800
+    }
+  },
+  "status": "finished",
+  "startTime": 1768856212238,
+  "duration": 10,
+  "createdAt": 1768856209491
+}

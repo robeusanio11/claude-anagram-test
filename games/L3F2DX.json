@@ -1,0 +1,32 @@
+{
+  "gameCode": "L3F2DX",
+  "letters": "INSGAT",
+  "players": {
+    "player_1768856089747_hw8j3ewv1": {
+      "name": "r",
+      "words": [
+        {
+          "word": "GAIN",
+          "points": 400
+        },
+        {
+          "word": "GAINS",
+          "points": 800
+        },
+        {
+          "word": "TAG",
+          "points": 100
+        },
+        {
+          "word": "TAGS",
+          "points": 400
+        }
+      ],
+      "score": 1700
+    }
+  },
+  "status": "finished",
+  "startTime": 1768856090742,
+  "duration": 10,
+  "createdAt": 1768856088124
+}
