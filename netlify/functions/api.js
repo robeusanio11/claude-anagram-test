@@ -1,6 +1,10 @@
-const { getStore } = require("@netlify/blobs");
-const fs = require("fs");
-const path = require("path");
+import { getStore } from "@netlify/blobs";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Load wordlist
 let wordSet = new Set();
@@ -63,7 +67,8 @@ function json(data, status = 200) {
 
 export default async (req, context) => {
   const url = new URL(req.url);
-  const pathParts = url.pathname.replace("/.netlify/functions/api", "").split("/").filter(Boolean);
+  // Strip /api prefix from path
+  const pathParts = url.pathname.replace(/^\/api/, "").split("/").filter(Boolean);
   const method = req.method;
 
   const store = getStore("games");

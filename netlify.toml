@@ -5,8 +5,4 @@
 
 [functions]
   included_files = ["wordlist.txt"]
-
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/api/:splat"
-  status = 200
+  node_bundler = "esbuild"
