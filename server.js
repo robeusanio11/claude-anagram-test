@@ -13,13 +13,13 @@ if (!fs.existsSync(gamesDir)) {
 }
 
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Load wordlist into memory
 let wordSet = new Set();
 let sixLetterWords = [];
 try {
-  const wordlist = fs.readFileSync('wordlist.txt', 'utf-8');
+  const wordlist = fs.readFileSync(path.join(__dirname, 'wordlist.txt'), 'utf-8');
   const words = wordlist.split('\n').map(w => w.trim().toUpperCase()).filter(w => w.length >= 3);
   wordSet = new Set(words);
   sixLetterWords = words.filter(w => w.length === 6);
