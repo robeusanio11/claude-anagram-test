@@ -6,6 +6,12 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const ROUND_DURATION = parseInt(process.env.ROUND_DURATION || '10', 10); // 10 seconds for testing
 
+// Ensure games directory exists
+const gamesDir = path.join(__dirname, 'games');
+if (!fs.existsSync(gamesDir)) {
+  fs.mkdirSync(gamesDir);
+}
+
 app.use(express.json());
 app.use(express.static('public'));
 
